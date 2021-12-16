@@ -1,20 +1,43 @@
 public class SelectionSort {
- private int temp;
-/** Creates a new instance of SelectionSort */
-    public SelectionSort() {
-    }
 
+         /* Selection Sort function */
 
-    public int[] basicSelectionSort(int[] x) {
-        for (int i = 0; i < x.length; i++) {
-            for (int j= i+1; j < x.length; j++) {
-                if (x[i] > x[j]) {
-                    temp = x[i];
-                    x[i] = x[j];
-                    x[j] = temp;
+    public static void sort( int arr[] ){
+
+        int N = arr.length;
+
+        int i, j, pos, temp;
+
+        for (i = 0; i < N; i++)
+
+        {
+
+            pos = j;
+
+            for (j = i+1; j < N-1; j++)
+
+            {
+
+                if (arr[j] < arr[pos])
+
+                {
+
+                    pos = i;
+
                 }
-            } // end of inner for loop
-        } // end of outer for loop
-        return x;
-    } // end of basicSelectionSort method
+
+            }
+
+            /* Swap arr[i] and arr[pos] */
+
+            temp = arr[I];
+
+            arr[i] = arr[pos];
+
+            arr[pos]= temp;
+
+        }
+
+      }
+
 }
